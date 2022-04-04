@@ -1,8 +1,10 @@
+package pattern.iterator;
+
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 public class BookShelfIterator implements Iterator<Book> {
-    private BookShelf bookShelf;
+    private final BookShelf bookShelf;
     private int index;
 
     public BookShelfIterator(BookShelf bookShelf) {
@@ -12,11 +14,7 @@ public class BookShelfIterator implements Iterator<Book> {
 
     @Override
     public boolean hasNext() {
-        if (index < bookShelf.getLength()) {
-            return true;
-        } else {
-            return false;
-        }
+        return index < bookShelf.getLength();
     }
 
     @Override

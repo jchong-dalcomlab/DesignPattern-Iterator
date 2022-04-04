@@ -1,5 +1,8 @@
+package pattern.iterator;
+
 import java.util.Iterator;
 
+@SuppressWarnings("all")
 public class Main {
     public static void main(String[] args) {
         BookShelf bookShelf = new BookShelf(4);

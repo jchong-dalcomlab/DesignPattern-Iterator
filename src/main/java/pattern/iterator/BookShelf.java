@@ -1,7 +1,9 @@
+package pattern.iterator;
+
 import java.util.Iterator;
 
 public class BookShelf implements Iterable<Book> {
-    private Book[] books;
+    private final Book[] books;
     private int last = 0;
 
     public BookShelf(int maxsize) {
